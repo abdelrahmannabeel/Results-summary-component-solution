@@ -37,7 +37,7 @@
 
 body {
   font-family: 'Hanken Grotesk', sans-serif;
-  background-color: var(--Pale-blue);
+  background-color: var(--white);
   min-height: 100vh;
 }
 /*========== Your Result ==========*/
@@ -103,6 +103,12 @@ body {
     display: flex;
     justify-content: center;
     width: 50%;
+    box-shadow: 0 0 15px 1px #00000027;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
   }
   .container > div {
     flex: 1;
