@@ -1,0 +1,197 @@
+/*=============== VARIABLES ===============*/
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavander: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* gradient for cards */
+
+  /* (background) */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+
+  /* (circle) */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* summary colors */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orange-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --opacity: .1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*========== Custom Font ==========*/
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--Pale-blue);
+  min-height: 100vh;
+}
+/*========== Your Result ==========*/
+.container > div {
+  padding: 25px;
+}
+.container > div:first-child:first-child {
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  -webkit-border-radius: 0 0 30px 30px;
+  -moz-border-radius: 0 0 30px 30px;
+  -ms-border-radius: 0 0 30px 30px;
+  -o-border-radius: 0 0 30px 30px;
+}
+.container > div:first-child > div {
+  margin: 20px auto;
+  height: 150px;
+  width: 150px;
+  background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.container > div:first-child > div div {
+  font-weight: 800;
+  font-size: 4rem;
+}
+.container > div:first-child > p {
+  width: 80%;
+  font-size: 1.2rem;
+  margin: 16px auto;
+}
+.container > div:first-child > div span,
+.container > div:first-child > p,
+.container > div:first-child > h2 {
+  color: var(--Light-lavander);
+}
+.container > div:first-child > h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.container > div:first-child > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 676px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .container > div {
+    flex: 1;
+  }
+  .container > div:first-child:first-child {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+  .container > div:first-child > div {
+    height: 190px;
+    width: 190px;
+  }
+}
+/*========== Summary ==========*/
+.container > div:nth-child(2) h2 {
+  margin: .8rem;
+  color: var(--Dark-gray-blue);
+
+}
+.row span {
+  display: flex;
+  color: var(--Dark-gray-blue);
+}
+.row div {
+  display: flex;
+}
+.row img {
+  margin-right: .5rem;
+}
+.row > span span {
+  color: gray;
+  margin-left: .5rem;
+}
+.row {
+  font-weight: 700;
+  margin-bottom: .6rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+
+.row-reaction {
+  color: var(--Light-red);
+  background-color: hsla(0, 100%, 67%, var(--opacity));
+}
+.row-memory {
+  color: var(--Orange-yellow);
+  background-color: hsla(39, 100%, 56%, var(--opacity));
+}
+.row-verbal {
+  color: var(--Green-teal);
+  background-color: hsla(166, 100%, 37%, var(--opacity));
+
+}
+.row-visual {
+  color: var(--Cobalt-blue);
+  background-color: hsla(234, 85%, 45%, var(--opacity));
+}
+button {
+  height: 4rem;
+  width: 100%;
+  margin: 1rem 0;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: var(--Dark-gray-blue);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+}
+button:active {
+  outline: none;
+  border: none;
+  background-color: var(--Violet-blue);
+}
